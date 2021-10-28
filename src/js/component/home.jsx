@@ -1,24 +1,47 @@
 import React from "react";
+import Bulb from "./bulb.jsx";
 
-//include images into your bundle
-import rigoImage from "../../img/rigo-baby.jpg";
-
-//create your first component
 const Home = () => {
+	const [lightFirst, setLightFirst] = useState(false);
+	const [lightSecond, setLightSecond] = useState(false);
+	const [lightThird, setLightThird] = useState(false);
+
+	const switchBulb = (color) => {
+		if (color == "stop") {
+			setLightFirst(true);
+			setLightSecond(false);
+			setLightThird(false);
+		} else if (color == "slow") {
+			setLightFirst(false);
+			setLightSecond(true);
+			setLightThird(false);
+		} else if (color == "go") {
+			setLightFirst(false);
+			setLightSecond(false);
+			setLightThird(false);
+		}
+	};
+
 	return (
-		<div className="text-center mt-5">
-			<h1>Hello Rigo!</h1>
-			<p>
-				<img src={rigoImage} />
-			</p>
-			<a href="#" className="btn btn-success">
-				If you see this green button... bootstrap is working
-			</a>
-			<p>
-				Made by{" "}
-				<a href="http://www.4geeksacademy.com">4Geeks Academy</a>, with
-				love!
-			</p>
+		<div className="traffic-light">
+			<Bulb
+				key="stop"
+				color="stop"
+				light={lightFirst}
+				switchLight={switchBulb}
+			/>
+			<Bulb
+				key="slow"
+				color="slow"
+				light={lightSecond}
+				switchLight={switchBulb}
+			/>
+			<Bulb
+				key="go"
+				color="go"
+				light={lightThird}
+				switchLight={switchBulb}
+			/>
 		</div>
 	);
 };
