@@ -1,33 +1,67 @@
 #app {
-    padding: 1rem;
+    padding: 3rem;
+    background-image: url("https://images.pexels.com/photos/378570/pexels-photo-378570.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+    height: 100vh; 
+    background-position: center;
+    background-repeat: no-repeat; 
+    background-size: cover;
 }
 
 .traffic-light {
+    background: #222;
+    background-image: linear-gradient(transparent 2%, #111 2%, transparent 3%, #111 30%);
+    width: 80px;
+    height: 240px;
+    border-radius: 20px;
+    position: relative;
+    border: solid 5px #333;
+}
+
+.base {
     width: fit-content;
     background-color:black;
-    padding: 1rem;
-};
+    width: 2vh;
+    height: 65vh;
+    margin-left: 2rem;
+    border: solid 5px #333;
+}
 
 
 .bulb {
-    width: 3rem;
-    height: 3rem;
-    border-radius: 100%;    
+    width: 4.5rem;
+    height: 4.5rem;
+    border-radius: 100%;  
+    align-items: center;
     background-color: grey;
 }
 
 .red {
     background-color: red;
+    background-image: radial-gradient(brown, transparent);
+    border: dotted 2px red; 
+    box-shadow: 
+    0 0 20px #111 inset,
+    0 0 10px red;
 }
 
 .yellow {
     background-color:  yellow;
+    background-image: radial-gradient(orange, transparent);
+    border: dotted 2px yellow;
+    box-shadow: 
+    0 0 20px #111 inset,
+    0 0 10px yellow;
 }
 
 .green {
     background-color: green;
+    background-image: radial-gradient(lime, transparent);
+    border: dotted 2px green;
+    box-shadow: 
+    0 0 20px #111 inset,
+    0 0 10px lime;
 }
 
 .glow {
-    box-shadow: 0px 0px 9px 4px #747DE8;
+    box-shadow: 0px 0px 20px 8px #fdfff0;
 }
